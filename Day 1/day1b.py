@@ -4,6 +4,7 @@ a = 0
 
 for line in inputFile:
     expenseList.append(int(line.strip("\n")))
+inputFile.close()
 
 for expenseA in expenseList:
     expenseB = expenseA
