@@ -2,8 +2,6 @@ import re
 
 inputFile = open("Day 2\input.txt", "r")
 passwordList = []
-alphabet = "abcdefghijklmnopqrstuvwxyz"
-
 validPasswords = []
 
 for line in inputFile:
@@ -11,14 +9,15 @@ for line in inputFile:
 inputFile.close()
 
 for password in passwordList:
-    passW = password[password.rindex(":"):].strip(": ")
-    policyMin = password[:password.rindex("-")]
-    policyMax = password[password.rindex("-"):password.rindex(":")].strip("-:abcdefghijklmnopqrstuvwxyz")
-    policyLet = password[:password.rindex(":")].strip("-1234567890")
-    strippedPass = re.sub("[^" + policyLet + "]", "", passW)
-    print("Password: {}\nMin: {}\nMax: {}\nLetter: {}\nStripped: {}\n".format(passW, policyMin, policyMax, policyLet, strippedPass))
-    if len(strippedPass) >= int(policyMin) and len(strippedPass) <= int(policyMax):
+    passwordLine = re.findall("\w+", password)
+    passW = passwordLine[3]
+    policyMin = int(passwordLine[0])
+    policyMax = int(passwordLine[1])
+    policyLet = passwordLine[2]
+    if len(re.findall(policyLet, passW)) >= policyMin and len(re.findall(policyLet, passW)) <= policyMax:
         validPasswords.append(passW)
-        print("Valid Password")
+        print("{} is valid.".format(passW))
+    else:
+        print("{} is not valid.".format(passW))
 
 print("Valid Passwords: {}".format(len(validPasswords)))
