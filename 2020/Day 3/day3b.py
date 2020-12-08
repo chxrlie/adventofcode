@@ -1,8 +1,6 @@
-import re
 import math
 
 mapFile = open("Day 3\input.txt", "r").read().splitlines()
-#print(mapFile)
 treeTile = "#"
 slopes = [(1, 1), (3, 1), (5, 1), (7, 1), (1, 2)]
 treeList = []
@@ -20,6 +18,7 @@ def findTrees(a, b):
         currentDown += moveDown
     return(trees)
 
+mapFile.close()
 for slope in slopes:
     treeList.append(findTrees(slope[0], slope[1]))
 

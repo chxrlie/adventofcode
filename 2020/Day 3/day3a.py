@@ -1,5 +1,3 @@
-import re
-
 mapFile = open("Day 3\input.txt", "r").read().splitlines()
 #print(mapFile)
 
