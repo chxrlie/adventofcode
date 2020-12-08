@@ -1,6 +1,6 @@
 import math
 
-mapFile = open("Day 3\input.txt", "r").read().splitlines()
+mapFile = open("2020\Day 3\input.txt", "r").read().splitlines()
 treeTile = "#"
 slopes = [(1, 1), (3, 1), (5, 1), (7, 1), (1, 2)]
 treeList = []

@@ -14,7 +14,7 @@ def policyCheck(posA, posB, policyLet, splitPass):
         print("PosB Match")
         return True
 
-inputFile = open("Day 2\input.txt", "r")
+inputFile = open("2020\Day 2\input.txt", "r")
 passwordList = []
 validPasswords = []
 

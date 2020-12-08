@@ -1,6 +1,6 @@
 import re
 
-inputFile = open("Day 2\input.txt", "r")
+inputFile = open("2020\Day 2\input.txt", "r")
 passwordList = []
 validPasswords = []
 

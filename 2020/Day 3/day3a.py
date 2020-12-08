@@ -1,4 +1,4 @@
-mapFile = open("Day 3\input.txt", "r").read().splitlines()
+mapFile = open("2020\Day 3\input.txt", "r").read().splitlines()
 #print(mapFile)
 
 treeTile = "#"

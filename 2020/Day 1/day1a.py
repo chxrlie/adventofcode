@@ -1,4 +1,4 @@
-inputFile = open("Day 1\input.txt", "r")
+inputFile = open("2020\Day 1\input.txt")
 expenseList = []
 a = 0
 b = 0
